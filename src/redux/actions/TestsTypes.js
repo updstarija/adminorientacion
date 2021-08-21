@@ -1,0 +1,1 @@
+export const CARGAR_LST_TESTS = 'CARGAR_LST_TESTS';
