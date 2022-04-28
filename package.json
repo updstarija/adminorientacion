@@ -1,6 +1,7 @@
 {
   "name": "adminorientacion",
   "version": "0.1.0",
+  "homepage": "https://tarija.upds.edu.bo/AdminTest/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
@@ -14,14 +15,19 @@
     "datatables.net": "^1.10.21",
     "datatables.net-dt": "^1.10.21",
     "firebase": "^7.16.0",
+    "history": "^4.10.1",
+    "html2canvas": "^1.4.1",
     "jquery": "^3.5.1",
+    "jspdf": "^2.5.1",
     "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-html-table-to-excel": "^2.0.0",
     "react-redux": "^7.2.0",
+    "react-router": "^3.2.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-to-print": "^2.14.6",
     "reactstrap": "^8.5.1",
     "redux": "^4.0.5",
     "sweetalert2": "^9.17.0",
@@ -47,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.3"
   }
 }

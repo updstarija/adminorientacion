@@ -5,7 +5,6 @@
 // import '../../StyGeneral/StyGeneral.css'
 // import { cargarLstTest } from "../../redux/actions/Tests.Action";
 
-
 // import SwalMensaje from '../../Components/SwalMensaje'
 // import firebase from "../../Firebase/Firebase";
 
@@ -35,8 +34,6 @@
 //   },
 // }
 
-
-
 // // var $  = require( 'jquery' );
 // // var dt = require( 'datatables.net' )();
 
@@ -46,8 +43,6 @@
 //   const dispatch = useDispatch()
 
 //   useEffect(() => {
-    
-
 
 //       // $('#myTable').DataTable();
 
@@ -56,10 +51,10 @@
 //   useEffect(() => {
 //     console.log('pedire lst')
 //     // $('#myTable').DataTable(LenguajeDataTable)
-    
+
 //       // const obtenerTests =  db.collection("usuarios").where('apellidos', '==', 'Velasquez Solano').onSnapshot((snapshot)=>{
 //       const obtenerTests =  db.collection("usuarios").onSnapshot((snapshot)=>{
- 
+
 //       const lst_test = []
 
 //       if ( $.fn.dataTable.isDataTable('#myTable') ) {
@@ -88,12 +83,12 @@
 
 //   return (
 //     <div className="container-fluid row p-0 justify-content-center m-0 animate__animated animate__wobble">
-//       <div 
+//       <div
 //         className="row w-75  shadow-lg justify-content-center align-items-start mt-5"
 //       >
-        
+
 //         {/* <SwalMensaje/> */}
-        
+
 //         <table className="table " id='myTable' >
 //           <thead className="GeneCabezeraTable">
 //             <tr>
@@ -112,7 +107,7 @@
 //             {
 //                 lstTest.map((test)=>{
 //                     return (
-//                         <FilaTable test = {{...test}} key={test.Id}/>    
+//                         <FilaTable test = {{...test}} key={test.Id}/>
 //                     )
 //                 })
 //             }
@@ -138,94 +133,98 @@
 //   };
 // };
 
-
 // export default connect(mapStateToProps, mapDispatchToProps)(Test);
-
-
-
-
-
-
 
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import FilaTable from './FilaTable'
-import '../../StyGeneral/StyGeneral.css'
+import FilaTable from "./FilaTable";
+import "../../StyGeneral/StyGeneral.css";
 
-import SwalMensaje from '../../Components/SwalMensaje'
+import SwalMensaje from "../../Components/SwalMensaje";
 
-const $ = require('jquery')
-$.DataTable = require('datatables.net')
+const $ = require("jquery");
+$.DataTable = require("datatables.net");
 
-const LenguajeDataTable ={
+const LenguajeDataTable = {
   language: {
-      "decimal": "",
-      "emptyTable": "No hay información",
-      "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-      "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
-      "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-      "infoPostFix": "",
-      "thousands": ",",
-      "lengthMenu": "Mostrar _MENU_ Entradas",
-      "loadingRecords": "Cargando...",
-      "processing": "Procesando...",
-      "search": "Buscar:",
-      "zeroRecords": "Sin resultados encontrados",
-      "paginate": {
-          "first": "Primero",
-          "last": "Ultimo",
-          "next": "Siguiente",
-          "previous": "Anterior"
-      }
+    decimal: "",
+    emptyTable: "No hay información",
+    info: "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+    infoEmpty: "Mostrando 0 to 0 of 0 Entradas",
+    infoFiltered: "(Filtrado de _MAX_ total entradas)",
+    infoPostFix: "",
+    thousands: ",",
+    lengthMenu: "Mostrar _MENU_ Entradas",
+    loadingRecords: "Cargando...",
+    processing: "Procesando...",
+    search: "Buscar:",
+    zeroRecords: "Sin resultados encontrados",
+    paginate: {
+      first: "Primero",
+      last: "Ultimo",
+      next: "Siguiente",
+      previous: "Anterior",
+    },
   },
-}
-
-
+};
 
 // var $  = require( 'jquery' );
 // var dt = require( 'datatables.net' )();
 
 const Test = (props) => {
-  const {lstTest} = props
+  const { lstTest } = props;
+  //const tabla = $("#myTable").DataTable(LenguajeDataTable);
   useEffect(() => {
     setTimeout(() => {
-      $('#myTable').DataTable(LenguajeDataTable);
+      //tabla.destroy();
+      $("#myTable").DataTable(LenguajeDataTable);
     }, 3222);
-      // $('#myTable').DataTable();
 
-      // console.log(lstTest)
+    // $('#myTable').DataTable();
+
+    // console.log(lstTest)
   }, []);
 
   return (
     <div className="container-fluid row p-0 justify-content-center m-0 animate__animated animate__wobble">
-      <div 
-        className="row w-75  shadow-lg justify-content-center align-items-start mt-5"
-      >
+      <div className="row w-75  shadow-lg justify-content-center align-items-start mt-5">
         {/* <SwalMensaje/> */}
-        
-        <table className="table " id='myTable' >
+
+        <table className="table " id="myTable">
           <thead className="GeneCabezeraTable">
             <tr>
               {/* <th className='text-light' scope="col">ID</th> */}
-              <th className='text-light' scope="col">Estudiante</th>
-              <th className='text-light' scope="col">Fecha</th>
-              <th className='text-light' scope="col">Celular</th>
-              <th className='text-light' scope="col">Estado Test</th>
-              <th className='text-light' scope="col">Revisado por:</th>
-              <th className='text-light' scope="col">Fecha Aprobado:</th>
-              <th className='text-light' scope="col">Aprobado:</th>
-              <th className='text-light' scope="col">Acciones:</th>
+              <th className="text-light" scope="col">
+                Estudiante
+              </th>
+              <th className="text-light" scope="col">
+                Fecha
+              </th>
+              <th className="text-light" scope="col">
+                Celular
+              </th>
+              <th className="text-light" scope="col">
+                Estado Test
+              </th>
+              <th className="text-light" scope="col">
+                Revisado por:
+              </th>
+              <th className="text-light" scope="col">
+                Fecha Aprobado:
+              </th>
+              <th className="text-light" scope="col">
+                Aprobado:
+              </th>
+              <th className="text-light" scope="col">
+                Acciones:
+              </th>
             </tr>
           </thead>
           <tbody>
-            {
-                lstTest.map((test)=>{
-                    return (
-                        <FilaTable test = {{...test}} key={test.Id}/>    
-                    )
-                })
-            }
+            {lstTest.map((test) => {
+              return <FilaTable test={{ ...test }} key={test.Id} />;
+            })}
           </tbody>
         </table>
       </div>

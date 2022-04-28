@@ -9,13 +9,14 @@ import SwalMensaje from "../../Components/SwalMensaje";
 
 const ExelEstudiantes = (props) => {
   const { lstTest = [] } = props;
+  let num = 0;
 
   console.log("lstest ", lstTest);
 
   return (
     <>
       <div className="row justify-content-center">
-        <ReactHTMLTableToExcel 
+        <ReactHTMLTableToExcel
           id="test-table-xls-button"
           className="download-table-xls-button bg-success text-light"
           table="myTable"
@@ -32,7 +33,7 @@ const ExelEstudiantes = (props) => {
             <thead className="GeneCabezeraTable">
               <tr>
                 <th className="text-light" scope="col">
-                  Id
+                  Nro
                 </th>
                 <th className="text-light" scope="col">
                   Nombres
@@ -66,13 +67,13 @@ const ExelEstudiantes = (props) => {
                   telefono = "",
                   turno = "",
                 } = test;
-                console.log('otro colegio ',colegioOtro)
+                console.log("otro colegio ", colegioOtro);
                 return (
                   <tr key={idnex}>
-                    {/* <td>{Id}</td> */}
+                    <td>{num + 1}</td>
                     <td>{nombres}</td>
                     <td>{apellidos}</td>
-                    <td>{colegio != 'Otro' ? colegio : colegioOtro}</td>
+                    <td>{colegio != "Otro" ? colegio : colegioOtro}</td>
                     <td>{curso}</td>
                     <td>{telefono}</td>
                     <td>{turno}</td>
